@@ -1,0 +1,25 @@
+﻿<Window x:Class="pr_20._101_Tryanov_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr_20._101_Tryanov_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="bd_Teac" AutoGenerateColumns="False" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="0,0,0,217" SelectionChanged="bd_Teac_SelectionChanged" Loaded="Windows_Loaded">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdTeachers}" Width="*"/>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}" Width="*"/>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}" Width="*"/>
+                <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="IDStatus" Binding="{Binding IdStatusTeachers}" Width="*"/>
+                <DataGridTextColumn Header="IDRole" Binding="{Binding IdRole}" Width="*"/>
+                <DataGridTextColumn Header="IDSpeciality" Binding="{Binding IdSpeciality}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Поиск" Name="search" HorizontalAlignment="Left" Margin="325,251,0,0" VerticalAlignment="Top" Height="48" Width="160"/>
+
+    </Grid>
+</Window>
