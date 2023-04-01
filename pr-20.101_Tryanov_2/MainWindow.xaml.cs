@@ -35,13 +35,22 @@ namespace pr_20._101_Tryanov_2
 
         private void Windows_Loaded(object sender, RoutedEventArgs e)// вывод данных на экран
         {
-            var query =
-                from Teachers in db.Teachers
-                where Teachers.IdSpeciality == 1
-                orderby Teachers.FirstName 
-                select new { Teachers.IdTeachers, Teachers.LastName, Teachers.FirstName, Teachers.Patronymic, Teachers.Email, Teachers.IdStatusTeachers, Teachers.IdRole, Teachers.IdSpeciality };
+            
+        }
 
-            bd_Teac.ItemsSource = query.ToList();
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            var data = Entities.GetContext().Teachers.ToList();
+
+            
+            if (data.Count !=0 ) 
+            {
+                bd_Teac.ItemsSource = Entities.GetContext().Teachers.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Внимание", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

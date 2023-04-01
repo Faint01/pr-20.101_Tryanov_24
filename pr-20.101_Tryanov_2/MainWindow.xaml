@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pr_20._101_Tryanov_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="teachers" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <DataGrid Name="bd_Teac" AutoGenerateColumns="False" d:ItemsSource="{d:SampleData ItemCount=10}" Margin="0,0,0,217" SelectionChanged="bd_Teac_SelectionChanged" Loaded="Windows_Loaded">
             <DataGrid.Columns>
@@ -14,12 +14,12 @@
                 <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}" Width="*"/>
                 <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
-                <DataGridTextColumn Header="IDStatus" Binding="{Binding IdStatusTeachers}" Width="*"/>
+                <DataGridTextColumn Header="IDStatus" Binding="{Binding IdStatusTeachers }" Width="*"/>
                 <DataGridTextColumn Header="IDRole" Binding="{Binding IdRole}" Width="*"/>
                 <DataGridTextColumn Header="IDSpeciality" Binding="{Binding IdSpeciality}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Поиск" Name="search" HorizontalAlignment="Left" Margin="325,251,0,0" VerticalAlignment="Top" Height="48" Width="160"/>
+        <Button Content="Поиск" Name="search" HorizontalAlignment="Left" Margin="325,251,0,0" VerticalAlignment="Top" Height="48" Width="160" Click="search_Click"/>
 
     </Grid>
 </Window>
